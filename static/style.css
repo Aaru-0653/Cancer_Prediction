@@ -1,24 +1,43 @@
+/* Color Palette */
+:root {
+    --green: #c8dea0;
+    --cream: #fdf1bb;
+    --pink-light: #cffaa6;
+    --pink-bold: #277240;
+}
+
 /* Container Styling */
 .container {
-    max-width: 1400px;   /* Make it wide enough for 4 inputs in a row */
+    max-width: 1400px;
     margin: 30px auto;
     padding: 30px;
-    background: #fff;
+    background: var(--green);
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Title Centering */
-.container h1, .container p {
+.container h1 {
     text-align: center;
     margin-bottom: 20px;
+    background: var(--pink-bold);
+    color: var(--cream);
+    padding: 16px 0;
+    border-radius: 8px;
+    letter-spacing: 1px;
+}
+.container p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--olive);
+    font-weight: 500;
 }
 
 /* Grid for Inputs */
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);  /* 👈 4 columns per row */
-    gap: 20px;  /* spacing between boxes */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 /* Input Group */
@@ -30,21 +49,23 @@
 .form-group label {
     font-weight: bold;
     margin-bottom: 6px;
-    color: #333;
+    color: var(--olive);
 }
 
 .form-group input {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--pink-bold);
     border-radius: 6px;
     outline: none;
     font-size: 14px;
+    background: var(--cream);
+    color: #333;
     transition: 0.3s ease;
 }
 
 .form-group input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    border-color: var(--pink-light);
+    box-shadow: 0 0 6px rgba(234, 0, 79, 0.2);
 }
 
 /* Button Styling */
@@ -53,28 +74,31 @@
     display: block;
     width: 100%;
     padding: 11px;
-    background: #007bff;
-    color: #fff;
+    background: var(--pink-light);
+    color: var(--pink-bold);
     border: none;
     border-radius: 6px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    letter-spacing: 1px;
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: var(--pink-bold);
+    color: var(--cream);
 }
 
 /* Responsive - For Small Screens */
 @media (max-width: 1024px) {
     .grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
     .grid {
-        grid-template-columns: 1fr; /* Stack in one column on phones */
+        grid-template-columns: 1fr;
     }
 }
