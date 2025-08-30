@@ -82,4 +82,4 @@ Deploy as a full-stack app with React frontend.
 
 
 👨‍💻 Author
-Made with ❤️ by [ Aaru ]
+Made with ❤️ by  Aaru 
